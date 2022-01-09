@@ -1,0 +1,13 @@
+.display-primary {
+ @include borderTest;
+ width: 80vw;
+ height: 80vh;
+ position: relative;
+ top: 10vh;
+ background-color: rgb(51, 172, 172);
+
+ &.goals {
+  @include flexCentered;
+  flex-direction: column;
+ }
+}

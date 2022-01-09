@@ -1,0 +1,5 @@
+.card {
+ @include borderTest;
+ width: 70vw;
+ padding: 0.4em;
+}

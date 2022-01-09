@@ -1,0 +1,10 @@
+@mixin flexCentered {
+ display: flex;
+ -webkit-box-flex: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+@mixin borderTest {
+ border: 1px solid white;
+}
