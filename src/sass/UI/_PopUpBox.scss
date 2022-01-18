@@ -1,0 +1,30 @@
+.card.modal_input {
+ height: 80vh;
+ border: 1px solid rgba(216, 216, 216, 0.938);
+ position: absolute;
+ z-index: 2;
+ background: rgb(247, 247, 247);
+ top: 10vh;
+ left: 0;
+ right: 0;
+ margin: 0 auto;
+ @include flexCentered;
+}
+
+.pop-up-box__backdrop {
+ width: 100vw;
+ height: 100vh;
+ background-color: rgba(59, 59, 59, 0.918);
+ backdrop-filter: blur(11px);
+ -webkit-backdrop-filter: blur(11px);
+}
+
+.pop-up-box__modal {
+ border: 1px solid #d6d6d6;
+ height: 90%;
+ width: 90%;
+ border-radius: 0.2em;
+ //  background-color: #e4e4e4;
+ background-color: #7b9ca3;
+ @include flexCentered;
+}

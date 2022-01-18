@@ -3,11 +3,11 @@ function DisplayPrimary(props) {
  return (
   <section className={classes}>
    <header className={props.className}>
-    <h1>{props.header}</h1>
+    <h1 className="display-primary-header">{props.header}</h1>
    </header>
-   <main>{props.children}</main>
-
-   <footer className={props.className}>{props.children2}</footer>
+   <nav className={props.className}>{props.children}</nav>
+   <main className={props.className}>{props.children2}</main>
+   <footer className={props.className}>{props.children3}</footer>
   </section>
  );
 }

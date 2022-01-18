@@ -1,0 +1,141 @@
+$font-color: rgb(80, 80, 80);
+
+.card {
+ &.modal_input-goals,
+ &.modal_input-goals_date-and-budget {
+  //   @include borderTest2(rgb(138, 133, 133));
+  width: 100%;
+  //   height: 4em;
+  height: 6em;
+  background-color: rgb(235, 234, 226);
+  padding: 0 1em;
+  input:focus {
+   outline-color: rgb(75, 216, 169);
+   outline-style: double;
+  }
+ }
+
+ &.modal_input-goals {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > input {
+   width: 80%;
+   height: 60%;
+   padding: 0 0.2em;
+   font-size: 0.9rem;
+   font-weight: bold;
+   color: $font-color;
+   font-style: italic;
+  }
+ }
+
+ &.modal_input-goals_date-and-budget {
+  @include flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & label {
+   margin: 0 0.8em;
+  }
+  @media screen and (max-width: 537px) {
+   flex-direction: column;
+   height: 9vh;
+   padding: 0.5em;
+  }
+ }
+}
+
+input[type='number'].modal_input-goals-time-limit {
+ width: 7rem;
+ height: 3vh;
+}
+// input[type='date'] {
+//  cursor: pointer;
+// }
+
+input[type='color'] {
+ cursor: pointer;
+}
+
+form.modal-form {
+ //  @include borderTest2(black);
+ width: 100%;
+ height: 90%;
+ @include flex;
+ align-items: center;
+ justify-content: space-around;
+ flex-direction: column;
+}
+
+section.modal_input_container {
+ //  @include borderTest2(rgb(114, 113, 113));
+ @include flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: column;
+ width: 80%;
+ height: 28vh;
+ padding: 0.4em;
+
+ @media screen and (max-width: 944px) {
+  //   padding: 2em;
+ }
+}
+
+.modal-input-bottom {
+ @include flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 80%;
+ //  @include borderTest2(black);
+
+ & label {
+  margin-right: 0.6rem;
+ }
+}
+div.assign-color {
+ background-color: azure;
+ border-radius: 0.2em;
+ padding: 0.6em 1em;
+}
+button.modal-goals_button {
+ width: 12rem;
+ &:hover {
+  font-style: italic;
+ }
+}
+
+//for mid smaller device
+
+@media screen and (max-width: 715px) {
+ section.modal_input_container {
+  width: 90%;
+ }
+ section.modal-input-bottom {
+  width: 90%;
+ }
+ div.assign-color {
+  padding: 0.4em;
+ }
+}
+
+@media screen and (max-width: 595px) {
+ section.modal_input_container {
+  width: 90%;
+ }
+ section.modal-input-bottom {
+  flex-direction: column;
+  height: 12vh;
+ }
+ div.assign-color {
+  width: 90%;
+  text-align: center;
+ }
+ button.modal-goals_button {
+  width: 90%;
+  border-radius: 1em;
+  letter-spacing: 1px;
+ }
+}

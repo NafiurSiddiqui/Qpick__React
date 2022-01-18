@@ -1,10 +1,20 @@
 @mixin flexCentered {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
  display: flex;
- -webkit-box-flex: flex;
  justify-content: center;
  align-items: center;
+}
+@mixin flex {
+ display: flex;
+ -webkit-box-flex: flex;
 }
 
 @mixin borderTest {
  border: 1px solid white;
+}
+
+@mixin borderTest2($color) {
+ border: 1px solid $color;
 }

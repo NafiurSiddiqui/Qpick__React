@@ -1,0 +1,20 @@
+.card-sort {
+ @include flex;
+ align-items: center;
+ justify-content: space-between;
+ //  background-color: #f7fbff;
+ background-color: #deefff;
+ font-size: 0.9rem;
+ color: #282828;
+}
+
+i.fa.fa-caret-down {
+ //  border: 1px solid black;
+ padding: 0 0.2em;
+ font-size: 1.2rem;
+}
+
+span.btn-sort {
+ @include flexCentered;
+ //  font-size: 1em;
+}

@@ -1,0 +1,17 @@
+button.button {
+ padding: 0.8em 1.3em;
+ font-weight: bold;
+ color: rgb(95, 93, 93);
+ border: 1px solid #81cacf;
+ font-size: 1rem;
+ font-family: Arial, Helvetica, sans-serif;
+ cursor: pointer;
+ background-color: #94d2d6;
+ border-radius: 0.4em;
+ transition: all 0.2s ease-in-out;
+ &:hover {
+  background-color: #3db6be;
+  color: whitesmoke;
+  border: 1px solid #4f949b;
+ }
+}

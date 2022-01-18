@@ -1,4 +1,19 @@
+*,
+*:before,
+*:after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html {
+ box-sizing: inherit;
+}
+
 body {
- background-color: rgb(49, 109, 109);
+ //  background-color: rgb(49, 109, 109);
+ background-color: $color__bodyBG;
  @include flexCentered;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+  'Lucida Sans', Arial, sans-serif;
 }
