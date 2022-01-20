@@ -1,8 +1,12 @@
-import { Fragment } from 'react';
 import Card from './Card';
 
 const Backdrop = (props) => {
- return <section className="pop-up-box__backdrop">{props.children}</section>;
+ let classes = 'pop-up-box__backdrop ' + props.className;
+ return (
+  <section className={classes} onClick={props.onTap}>
+   {props.children}
+  </section>
+ );
 };
 
 const BoxModal = (props) => {
@@ -12,14 +16,16 @@ const BoxModal = (props) => {
 
 function PopUpBox(props) {
  return (
-  <Fragment>
-   <Backdrop className="Backdrop"></Backdrop>
+  <>
+   <Backdrop onTap={props.onClose}>
+    <span className="backdrop-cross"> &#10006;</span>
+   </Backdrop>
    <Card className={props.className}>
     <BoxModal>
      <form className="modal-form">{props.children}</form>
     </BoxModal>
    </Card>
-  </Fragment>
+  </>
  );
 }
 export default PopUpBox;

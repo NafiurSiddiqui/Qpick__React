@@ -1,4 +1,4 @@
-$font-color: rgb(80, 80, 80);
+$font-color: rgb(54, 54, 54);
 
 .card {
  &.modal_input-goals,
@@ -25,9 +25,13 @@ $font-color: rgb(80, 80, 80);
    height: 60%;
    padding: 0 0.2em;
    font-size: 0.9rem;
-   font-weight: bold;
+   //    font-weight: bold;
    color: $font-color;
    font-style: italic;
+
+   &::placeholder {
+    color: rgb(202, 201, 201);
+   }
   }
  }
 
@@ -47,13 +51,14 @@ $font-color: rgb(80, 80, 80);
  }
 }
 
+.modal_input-header {
+ color: rgb(83, 83, 83);
+}
+
 input[type='number'].modal_input-goals-time-limit {
  width: 7rem;
  height: 3vh;
 }
-// input[type='date'] {
-//  cursor: pointer;
-// }
 
 input[type='color'] {
  cursor: pointer;
@@ -78,7 +83,8 @@ section.modal_input_container {
  width: 80%;
  height: 28vh;
  padding: 0.4em;
-
+ position: relative;
+ top: -2em;
  @media screen and (max-width: 944px) {
   //   padding: 2em;
  }

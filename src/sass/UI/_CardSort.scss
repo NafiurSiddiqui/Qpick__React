@@ -18,3 +18,7 @@ span.btn-sort {
  @include flexCentered;
  //  font-size: 1em;
 }
+
+.card-sort__header {
+ color: $color__fontHeader;
+}

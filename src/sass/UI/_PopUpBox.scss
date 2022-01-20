@@ -2,7 +2,6 @@
  height: 80vh;
  border: 1px solid rgba(216, 216, 216, 0.938);
  position: absolute;
- z-index: 2;
  background: rgb(247, 247, 247);
  top: 10vh;
  left: 0;
@@ -14,9 +13,12 @@
 .pop-up-box__backdrop {
  width: 100vw;
  height: 100vh;
- background-color: rgba(59, 59, 59, 0.918);
+ background-color: rgba(40, 44, 44, 0.404);
  backdrop-filter: blur(11px);
  -webkit-backdrop-filter: blur(11px);
+ position: absolute;
+ left: 0;
+ z-index: 2;
 }
 
 .pop-up-box__modal {
@@ -27,4 +29,27 @@
  //  background-color: #e4e4e4;
  background-color: #7b9ca3;
  @include flexCentered;
+ position: relative;
+ z-index: 10;
+}
+
+.backdrop-cross {
+ font-size: 2rem;
+ position: absolute;
+ right: 0.6em;
+ top: 0.5em;
+ color: #cdcdcd;
+ cursor: pointer;
+ transition: 0.2s ease-in-out;
+ &:hover {
+  color: #f1f1f1;
+ }
+}
+
+.none-activated {
+ display: none;
+}
+
+.activated {
+ display: inline-block;
 }

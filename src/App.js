@@ -1,13 +1,17 @@
 import { Fragment } from 'react';
 import Goals from './components/goals/Goals';
-import GoalsPopUpBox from './components/goals/GoalsPopUpBox';
+
 import './sass/main.scss';
 
 function App() {
+ const addGoalsHandler = (expense) => {
+  console.log('From App.js');
+  console.log(expense);
+ };
+
  return (
   <Fragment>
-   <GoalsPopUpBox></GoalsPopUpBox>
-   <Goals />;
+   <Goals onSaveGoals={addGoalsHandler} />;
   </Fragment>
  );
 }

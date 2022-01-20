@@ -1,7 +1,7 @@
-function DisplayPrimary(props) {
+function DisplaySecondary(props) {
  const classes = 'display-primary ' + props.className;
  return (
-  <section className={classes}>
+  <section className={classes} onChange={props.onSaveGoalsData}>
    <header className={props.className}>
     <h1 className="display-primary-header">{props.header}</h1>
    </header>
@@ -12,4 +12,4 @@ function DisplayPrimary(props) {
  );
 }
 
-export default DisplayPrimary;
+export default DisplaySecondary;
