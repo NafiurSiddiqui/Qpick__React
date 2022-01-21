@@ -22,7 +22,9 @@ function PopUpBox(props) {
    </Backdrop>
    <Card className={props.className}>
     <BoxModal>
-     <form className="modal-form">{props.children}</form>
+     <form className="modal-form" onSubmit={props.onSubmit}>
+      {props.children}
+     </form>
     </BoxModal>
    </Card>
   </>

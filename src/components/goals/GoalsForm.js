@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 // This is where new goals list is made
 
-function GoalsPopUpBox(props) {
- // state management
+function GoalsForm(props) {
+ // state management for userInput
  const [goalsTitle, setGoalsTitle] = useState('');
 
  const [goalsTimeLimit, setGoalsTimeLimit] = useState('');
@@ -62,7 +62,11 @@ function GoalsPopUpBox(props) {
  };
 
  return (
-  <PopUpBox className="modal_input" onClose={props.onClose}>
+  <PopUpBox
+   className="modal_input"
+   onClose={props.onClose}
+   onSubmit={submitHandler}
+  >
    <h1 className="modal_input-header">Set your budget for spcific goals</h1>
    <section className="modal_input_container">
     <Card className="modal_input-goals">
@@ -111,15 +115,11 @@ function GoalsPopUpBox(props) {
      <input type="color" id="assignColor" onChange={goalsColorHandler} />
     </div>
 
-    <Button
-     type="submit"
-     className="modal-goals_button"
-     onClick={submitHandler}
-    >
+    <Button type="submit" className="modal-goals_button">
      Save
     </Button>
    </section>
   </PopUpBox>
  );
 }
-export default GoalsPopUpBox;
+export default GoalsForm;

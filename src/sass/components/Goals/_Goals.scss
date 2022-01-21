@@ -29,8 +29,32 @@
  @include flex;
  justify-content: space-around;
  color: $color__fontHeader;
+ width: 100%;
 }
 
 .goals-list-container-header_title {
  font-size: 0.8rem;
+}
+.card.goals-list-container {
+ @include flexCentered;
+ flex-direction: column;
+}
+.card.goals-list-card {
+ @include flexCentered;
+ flex-direction: column;
+}
+
+.goals-list-list-container {
+ width: 100%;
+ @include flexCentered;
+ flex-direction: column;
+ text-align: center;
+}
+.goals-list-list {
+ @include flex;
+ @include borderTest2(rgb(205, 205, 224));
+ justify-content: space-between;
+ align-items: center;
+ padding: 1em;
+ width: 100%;
 }
