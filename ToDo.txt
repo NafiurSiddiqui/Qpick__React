@@ -1,0 +1,5 @@
+//Goals component - 
+
+> needs Error handling
+
+> Probably needs table implementation for list of cards to align with the header
